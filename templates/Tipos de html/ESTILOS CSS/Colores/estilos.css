@@ -1,0 +1,8 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: hsl(240, 40%, 75%);
+    margin: 10px;
+    margin-left: 150px;
+    text-align: center;
+}

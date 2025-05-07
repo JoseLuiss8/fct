@@ -1,0 +1,29 @@
+p {
+    color: red;
+    font-family: montserrat;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: justify;
+    text-decoration: underline overline;
+    line-height: 1.5;
+    letter-spacing: 10px;
+}
+
+h1 {
+    text-align: center
+}
+
+span {
+    text-decoration: line-through;
+    color: brown;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    letter-spacing: 2px;
+}
+

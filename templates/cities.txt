@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario con validación</title>
+    <script>
+        function validarFormulario() {
+            const nombre = document.forms["formulario"]["nombre"].value;
+            const edad = document.forms["formulario"]["edad"].value;
+            const acepto = document.forms["formulario"]["condiciones"].checked;
+
+            if (nombre === "" || edad === "") {
+                alert("Todos los campos son obligatorios.");
+                return false;
+            }
+
+            if (!acepto) {
+                alert("Debes aceptar las condiciones.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    <style>
+        form {
+            margin: 20px;
+            background: #ccc;
+            padding: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario con validación JS</h1>
+
+    <form name="formulario" action="/procesar/formulario" method="post" onsubmit="return validarFormulario();">
+        Nombre y Apellido: <input type="text" name="nombre"><br><br>
+        Edad: <input type="number" name="edad"><br><br>
+
+        Ciudad:
+        <select name="ciudad">
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="valencia">Valencia</option>
+            <option value="sevilla">Sevilla</option>
+            <option value="zaragoza">Zaragoza</option>
+        </select><br><br>
+
+        Sexo:
+        <input type="radio" name="sexo" value="hombre"> Hombre
+        <input type="radio" name="sexo" value="mujer"> Mujer<br><br>
+
+        <input type="checkbox" name="condiciones"> Acepto las condiciones<br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
